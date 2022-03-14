@@ -1,0 +1,17 @@
+.list_input_controls_container {
+	width: 100%;
+	font-family: sans-serif;
+}
+
+.list_input_controls_container h2 {
+	color: #8780ff;
+	font-size: 16pt;
+}
+
+.list_input_controls_error {
+	color: #f00;
+}
+
+.list_input_controls_error_hide {
+	visibility: hidden;
+}

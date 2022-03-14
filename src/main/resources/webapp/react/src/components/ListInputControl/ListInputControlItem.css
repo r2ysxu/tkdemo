@@ -1,0 +1,16 @@
+.list_input_control_item_container {
+    width: 100%;
+     display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.list_input_control_item_remove_button {
+    cursor: pointer;
+    color: #959595;
+}
+
+.list_input_control_item_remove_button:hover {
+    color: #000;
+}

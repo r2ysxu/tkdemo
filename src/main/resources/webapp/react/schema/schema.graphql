@@ -1,0 +1,44 @@
+type Query {
+  items(first: Int!, after: ID): ItemEdgeConnection
+}
+
+interface Node {
+  id: ID!
+}
+
+interface Edge {
+  cursor: String!
+}
+
+type ConnectionCursor {
+  value: String
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
+
+type ItemEdgeConnection {
+  edges: [ItemEdge!]
+  pageInfo: PageInfo!
+  total: Int!
+}
+
+type ItemEdge implements Edge {
+  cursor: String!
+  node: Item!
+}
+
+type Item implements Node {
+  id: ID!
+  message: String
+}
+
+type Mutation {
+  createItem(message: String!): ItemEdge
+  createItems(message: [String!]): [Item]
+  deleteItem(id: ID!): Boolean
+}
